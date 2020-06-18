@@ -58,7 +58,7 @@ export default function Profile() {
                 </button>
             </header>
 
-            <h1>Produtos cadastrados</h1>
+            <h1>Seus produtos cadastrados!</h1>
 
             <ul>
                {produtos.map(produto => (

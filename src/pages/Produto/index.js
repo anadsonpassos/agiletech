@@ -48,7 +48,7 @@ export default function Produto() {
                     <img src={logoImg} alt="Ágil Tech" />
 
                     <h1>Cadastro novo produto</h1>
-                    <p>Detalhes do produto para que os nosso clientes conheça mais sobre o produto que vai adquirir.</p>
+                    <p>Aqui você raliza o cadastro de produtos, poderá informar detalhes e valores para o seu produto. Vamos em frente!</p>
 
                     <Link className="back-link" to="/profile">
                         <FiArrowLeft size={16} color="E02041" />
@@ -63,12 +63,12 @@ export default function Produto() {
                         onChange={e => setTitle(e.target.value)}
                     />
                     <textarea 
-                        placeholder="Descrição"
+                        placeholder="Descrição do seu produto"
                         value={description}
                         onChange={e => setDescription(e.target.value)}
                     />
                     <input 
-                        placeholder="Valor em reais sem vírgula"
+                        placeholder="Valor em reais utilizando pontos ex: 100.15"
                         value={value}
                         onChange={e => setValue(e.target.value)}
                     />

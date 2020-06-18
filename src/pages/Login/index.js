@@ -37,7 +37,7 @@ export default function Login() {
                     <h1>Faça seu Login</h1>
 
                     <input 
-                        placeholder="Digite seu melhor email"
+                        placeholder="Digite seu ID"
                         value={id}
                         onChange={e => setId(e.target.value)}
                     />

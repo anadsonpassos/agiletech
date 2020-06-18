@@ -25,12 +25,13 @@
 }
 
 .profile-container header button {
+    margin-top: 16px;
     height: 60px;
     width: 60px;
-    border-radius: 4px;
+    border-radius: 6px;
     border: 1px solid #dcdce6;
-    background: transparent;
-    margin-left: 16px;
+    background: rgb(234, 229, 236);
+    margin-left: 28px;
     transition: border-color 0.3s;
 }
 
