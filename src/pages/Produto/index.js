@@ -8,16 +8,16 @@ import './style.css';
 
 import logoImg from '../../assets/logo.png';
 
-export default function NewProduto() {
+export default function Produto() {
     const [title, setTitle] = useState('');
     const [description, setDescription] = useState('');
     const [value, setValue] = useState('');
 
     const history = useHistory();
 
-    const ClienteId = localStorage.getItem('ClienteId')
+    const clienteId = localStorage.getItem('clienteId');
 
-    async function handleNewProduto(e) {
+    async function handleProduto(e) {
         e.preventDefault();
 
         const data = {
@@ -27,25 +27,27 @@ export default function NewProduto() {
         };
 
         try {
-            await api.post('produtos', data, {
+           await api.post('produtos', data, {
                 headers: {
-                    Authorization: ClienteId,
+                    Authorization: clienteId,
                 }
             })
 
-          history.push('/profile')  
+          history.push('/profile');
+            alert(`Produto cadastrado com sucesso!`);
         } catch (err) {
+            console.log(err)
             alert('Erro ao cadastrar caso, tente novamente.');
         }
     }
 
     return (
-        <div className="new-produto-container">
+        <div className="produto-container">
             <div className="content">
                 <section>
                     <img src={logoImg} alt="Ágil Tech" />
 
-                    <h1>Cadastro novo produto </h1>
+                    <h1>Cadastro novo produto</h1>
                     <p>Detalhes do produto para que os nosso clientes conheça mais sobre o produto que vai adquirir.</p>
 
                     <Link className="back-link" to="/profile">
@@ -54,7 +56,7 @@ export default function NewProduto() {
                     </Link>
                 </section>
 
-                <form onSubmit={handleNewProduto}>
+                <form onSubmit={handleProduto}>
                     <input 
                         placeholder="Título do Produto"
                         value={title}
@@ -66,7 +68,7 @@ export default function NewProduto() {
                         onChange={e => setDescription(e.target.value)}
                     />
                     <input 
-                        placeholder="Valor em reais"
+                        placeholder="Valor em reais sem vírgula"
                         value={value}
                         onChange={e => setValue(e.target.value)}
                     />

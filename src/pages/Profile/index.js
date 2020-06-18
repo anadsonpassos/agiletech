@@ -13,24 +13,24 @@ export default function Profile() {
 
     const history = useHistory();
 
-    const ClienteId = localStorage.getItem('ClienteId');
-    const ClienteName = localStorage.getItem('ClienteName');
+    const clienteId = localStorage.getItem('clienteId');
+    const clienteName = localStorage.getItem('clienteName');
 
     useEffect(() => {
         api.get('profile', {
             headers: {
-                Authorization: ClienteId,
+                Authorization: clienteId,
             }
         }).then(response => {
             setProdutos(response.data);
         })
-    }, [ClienteId]);
+    }, [clienteId]);
 
     async function handleDeleteProduto(id) {
         try {
             await api.delete(`produtos/${id}`, {
                 headers: {
-                    Authorization: ClienteId,
+                    Authorization: clienteId,
                 }
             });
 
@@ -50,9 +50,9 @@ export default function Profile() {
         <div className="profile-container">
             <header>
                 <img src={logoImg} alt="Ágile Tech" />
-                <span>Bem vindo(a), {ClienteName}!</span>
+                <span>Bem vindo(a), {clienteName}!</span>
 
-                <Link className="button" to="/produtos/new">Cadastrar novo produto</Link>
+                <Link className="button" to="/produtos">Cadastrar novo produto</Link>
                 <button onClick={handleLogout} type="button">
                     <FiPower size={18} color="E02041" />
                 </button>

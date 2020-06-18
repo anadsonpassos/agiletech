@@ -4,7 +4,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import Profile from './pages/Profile';
-import NewProduto from './pages/NewProduto';
+import Produto from './pages/Produto';
 
 export default function() {
     return (
@@ -14,7 +14,7 @@ export default function() {
                 <Route path="/register" component={Register} />
 
                 <Route path="/profile" component={Profile} />
-                <Route path="/produtos/new" component={NewProduto} />
+                <Route path="/produtos" component={Produto} />
             </Switch>
         </BrowserRouter>
     );
