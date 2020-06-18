@@ -45,7 +45,7 @@ export default function Register() {
                     <img src={logoImg} alt="Ágil Tech" />
 
                     <h1>Cadastro</h1>
-                    <p>Faça seu cadastro para acompanhar os nossos serviços e agendar conosco. Fiquem á vontatde para apresentar novas sugestões.</p>
+                    <p>Faça seu cadastro para acompanhar os nossos produtos e solcitar informações para realizar sua compra.</p>
 
                     <Link className="back-link" to="/">
                         <FiArrowLeft size={16} color="E02041" />
