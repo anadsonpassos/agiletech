@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import { FiArrowLeft } from 'react-icons/fi';
+import { TiDeviceLaptop } from "react-icons/ti";
 
 import api from '../../services/api';
 
@@ -44,8 +45,8 @@ export default function Register() {
                 <section>
                     <img src={logoImg} alt="Ágil Tech" />
 
-                    <h1>Cadastro</h1>
-                    <p>Faça seu cadastro para acompanhar os nossos produtos e solcitar informações para realizar sua compra.</p>
+                    <h1>Cadastre-se <TiDeviceLaptop size={40} color="rgb(49, 47, 129)" /></h1>
+                    <p>Faça seu cadastro para guardar aquelas receitas saborosas de família, suas receitas criativas e tenha acesso de onde estiver. Divirta-se e prepare seus pratos dliciosos!</p>
 
                     <Link className="back-link" to="/">
                         <FiArrowLeft size={16} color="E02041" />

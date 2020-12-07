@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import { FiLogIn } from 'react-icons/fi';
+import { TiHeartFullOutline } from "react-icons/ti";
+import { GoRocket } from "react-icons/go";
 
 import api from '../../services/api';
 
@@ -24,6 +26,7 @@ export default function Login() {
 
               history.push('/profile');
             } catch (err) {
+                
                 alert( 'Falha no login, tente novamente.' );
         }
     }
@@ -34,7 +37,7 @@ export default function Login() {
                 <img src={logoImg} alt="Ágil Tech" />
 
                 <form onSubmit={handleLogin}>
-                    <h1>Faça seu Login</h1>
+                    <h1>Faça seu Login! <GoRocket size={40} color="rgb(49, 47, 129)" /></h1>
 
                     <input 
                         placeholder="Digite seu ID"
@@ -50,6 +53,16 @@ export default function Login() {
                 </form>
             </section>
 
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css"></link>
+            <a class="whatsapp-link" href="https://web.whatsapp.com/send?phone=5511952035844" target="blank">
+                <i class="fa fa-whatsapp"></i>
+            </a>
+    
+            <div class="info">
+                <p id="saudacao">
+                    Com <TiHeartFullOutline size={22} color="E02041" /> <a href="https://www.youtube.com/channel/UCxrNx31B2RlbfZmFZ5FV7zg" target="blank">Agile Tech</a>
+                </p>
+            </div>
             <img src={robosImg} alt="Robos" />
         </div>
     );

@@ -11,8 +11,8 @@
 }
 
 .profile-container header span {
-    font-size:  20px;
-    margin-left: 24px;
+    font-size:  23px;
+    margin-left: 28px;
 }
 
 .profile-container header img {
@@ -36,7 +36,7 @@
 }
 
 .profile-container header button:hover {
-    border-color: #999;
+    border-color: rgb(129, 12, 12);
 }
 
 .profile-container h1 {
@@ -73,7 +73,7 @@
 .profile-container ul li strong {
     display: block;
     margin-bottom: 16px;
-    color: #41414d;
+    color: rgb(49, 47, 129);
 }
 
 .profile-container ul li p + strong {
@@ -81,7 +81,7 @@
 }
 
 .profile-container ul li p {
-    color: #737380;
+    color: #545466;
     line-height: 21px;
     font-size: 16px;
 }

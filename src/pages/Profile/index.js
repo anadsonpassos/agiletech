@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import { FiPower, FiTrash2 } from 'react-icons/fi';
+import { IoMdHappy, IoIosEye } from "react-icons/io";
 
 import api from '../../services/api';
 
@@ -50,7 +51,7 @@ export default function Profile() {
         <div className="profile-container">
             <header>
                 <img src={logoImg} alt="Ágile Tech" />
-                <span>Bem vindo(a), {clienteName}!</span>
+                <span>Bem vindo(a), {clienteName}! <IoMdHappy size={35} color="rgb(49, 47, 129)" /></span>
 
                 <Link className="button" to="/produtos">Cadastrar novo produto</Link>
                 <button onClick={handleLogout} type="button">
@@ -58,19 +59,19 @@ export default function Profile() {
                 </button>
             </header>
 
-            <h1>Seus produtos cadastrados!</h1>
+                <h1>Suas receitas cadastradas! <IoIosEye size={40} color="rgb(49, 47, 129)" /></h1>
 
             <ul>
                {produtos.map(produto => (
                    <li key={produto.id}>
 
-                       <strong>PRODUTO:</strong>
+                       <strong>NOME DA RECEITA:</strong>
                        <p>{produto.title}</p>
     
-                       <strong>DESCRIÇÃO:</strong>
+                       <strong>DESCRIÇÃO DA RECEITA:</strong>
                        <p>{produto.description}</p>
     
-                       <strong>VALOR:</strong>
+                       <strong>VALOR MÉDIO DA RECEITA:</strong>
                        <p>{Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(produto.value)}</p>
     
                        <button onClick={() => handleDeleteProduto(produto.id)} type="button">
