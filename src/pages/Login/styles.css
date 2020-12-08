@@ -49,6 +49,12 @@ a i:hover{
     text-shadow:none;
 }
 
+p a:hover{
+    color: #41414d;
+    text-decoration:none;
+    text-shadow:none;
+}
+
 .info {
     color: #41414d;
     font-size: 18px;
